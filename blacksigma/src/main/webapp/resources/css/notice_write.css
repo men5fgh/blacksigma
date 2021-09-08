@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/* #container starts */
+
+#container{
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 100px;
+    background-color: white;
+}
+
+.main_image{
+    position: relative;
+    margin-bottom: 60px;
+}
+.main_image img{
+    height: 200px;
+}
+.main_image p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+.main{
+    width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+}
+.main_aside_menu ul{
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-right: 36px;
+}
+.main_aside_menu ul div{
+    background-image: url(../img/background_menu.jpg);
+    height: 75px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.main_aside_menu ul div span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: url(../img/megaphone_white.png);
+    margin-right: 10px;
+}
+.main_aside_menu ul li{
+    border-bottom: 1px solid silver;
+    padding-left: 20px;
+    padding-right: 10px;
+    transition: ease 0.5s;
+}
+.main_aside_menu ul li:hover{
+    background-color: rgb(240, 240, 240);
+    transition: ease 0.5s;
+}
+.main_aside_menu ul .main_aside_on{
+    background-color: #14b2e7;
+}
+.main_aside_menu ul .main_aside_on:hover{
+    background-color: #14b2e7;
+}
+.main_aside_menu ul li a{
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.9);
+    height: 50px;
+}
+.main_aside_menu ul .main_aside_on a{
+    color: rgba(255, 255, 255, 0.9)
+}
+.main_aside_menu ul li a span{
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: url(../img/rightarrow_black.png);
+}
+.main_aside_menu ul .main_aside_on a span{
+    background-image: url(../img/downarrow_white.png);
+    width: 12px;
+    height: 12px;
+}
+.main_contents{
+    width: 1100px;
+}
+.main_contents>p{
+    display: flex;
+    align-items: center;
+}
+.main_contents>p>span{
+    margin-right: 3px;
+    font-size: 14px;
+}
+.span_home{
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: url(../img/home_black.png);
+
+}
+.span_arrow{
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: url(../img/rightarrow_black.png);
+}
+.main_contents>p>span:last-child{
+    font-weight: 700;
+}
+.main_contents .board h3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    line-height: 1em;
+    border-bottom: 1px solid silver;
+}
+.board form{
+	margin-bottom: 25px;
+}
+.board_table{
+    width: 100%;
+    margin-top: 35px;
+    border-top: 2px solid rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+    font-size: 15px;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.board_table>ul:first-child{
+	border-bottom: 2px solid silver;
+	width: 100%;
+    height: 50px;
+    display: flex;
+}
+.board_table>ul:nth-child(2){
+	border-bottom: 1px solid silver;
+	width: 100%;
+    display: flex;
+}
+.board_table>ul:nth-child(2) input{
+	font-weight: 500;
+}
+.board_table>ul>li:first-child{
+	width: 7.5%;
+    font-weight: 700;
+    padding-left: 20px;
+}
+.board_table>ul:first-child input {
+	width: 900px;
+	line-height: 1.4em;
+	padding-left: 5px;
+	padding-top: 5px;
+	font-size: 14px;
+};
+.board_table>ul:last-child{
+	width: 100%;
+	display: flex;
+}
+.areatext{
+	display:flex;
+}
+.board_table>ul textarea{
+	width: 902px;
+	height: 358px;	
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-left: 5px;
+	font-size: 13px;
+	line-height: 1.4em;
+	margin-bottom: 15px;
+}
+.board form>button{
+	cursor:pointer;
+	margin-top: 15px;
+	margin-left: 921.5px;
+	width: 90px;
+	height: 40px;
+	background-image: url(../img/background_menu.jpg);
+	border: 1px solid silver;
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 700;
+}
+.board form>button span{
+	width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;	
+    background-position: center;   
+    background-image: url(../img/pencil_white.png);
+    margin-right: 10px;
+}
+.board form>.list_button{
+	cursor:pointer;
+	margin: 0 auto;
+	width: 90px;
+	height: 40px;
+	background-color: #14b2e7;
+	border: 1px solid silver;
+	border-radius: 4px;
+	display:flex;
+}
+.board form>.list_button span{
+	width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;	
+    background-position: center;   
+    background-image: url(../img/list_white.png);
+    margin-right: 10px;
+}
+/*
+.main_contents>button a{
+	width: 90px;
+	height: 40px;	
+	color: rgba(255, 255, 255, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 700;
+}
+.main_contents>button span{
+	width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;	
+    background-position: center;   
+    background-image: url(../img/list_white.png);
+    margin-right: 10px;
+}
+*/
+form .uploadResult ul{
+	width: 909px;
+}
+form .uloadResult ul li{
+	padding-bottom: 15px;
+}
+form .uploadResult li div{
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: 12px;
+}
+form .uploadResult li div span{
+	width: 300px;
+}
+form .uploadResult li div img{
+	border: 1px solid silver;
+	width : 30px;
+	height : 30px;
+}
+form .uploadResult .diskette{
+	border: none;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}

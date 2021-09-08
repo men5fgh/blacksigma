@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* #footer */
+
+#footer{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+.f_gnb{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.f_gnb_in{
+    width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.f_menu ul{
+    display: flex;
+}
+.f_menu ul li{
+    margin-right: 20px;
+}
+.f_menu ul li a{
+    color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5)
+}
+.f_menu ul li a:hover{
+    text-decoration: underline;
+}
+.f_sns ul{
+    display: flex;
+    align-items: center;
+}
+.f_sns ul li{
+    padding-left: 20px;
+}
+.f_sns ul li a p{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: 100% 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    transition: ease 0.5s;
+}
+.f_sns ul li a .facebook{
+    background-image: url(../img/facebook_white.png);
+}
+.f_sns ul li a .instagram{
+    background-image: url(../img/instagram_white.png);
+}
+.f_sns ul li a .youtube{
+    background-image: url(../img/youtube_white.png);
+}
+.f_sns ul li a .twitter{
+    background-image: url(../img/twitter_white.png);
+}
+.f_sns ul li a .facebook:hover{
+    background-image: url(../img/facebook_blue.png);
+    transition: ease 0.5s;
+}
+.f_sns ul li a .instagram:hover{
+    background-image: url(../img/instagram_blue.png);
+    transition: ease 0.5s;
+}
+.f_sns ul li a .youtube:hover{
+    background-image: url(../img/youtube_blue.png);
+    transition: ease 0.5s;
+}
+.f_sns ul li a .twitter:hover{
+    background-image: url(../img/twitter_blue.png);
+    transition: ease 0.5s;
+}
+.footer_in{
+    width: 1366px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.f_logo{
+    display: flex;
+    margin-bottom: 20px;
+}
+.f_sublogo{
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/sublogo_white.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f_mainlogo{
+    margin-left: 30px;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/logo_white.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f_info{
+    margin-bottom: 10px;
+}
+.f_copyright{
+    font-weight: 500;
+}
+
+/* #footer ends */

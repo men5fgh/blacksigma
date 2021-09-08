@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.blacksigma.mapper.NoticeAttachMapper">
+	<insert id="attachMapperNoticeInsert">
+		insert into tbl_notice_attach(uuid, uploadpath, filename, filetype, bno)
+		values(#{uuid}, #{uploadpath}, #{filename}, #{filetype}, #{bno})
+	</insert>
+	
+	<delete id="attachMapperNoticeDelete">
+		delete from tbl_notice_attach where uuid = #{uuid}
+	</delete>
+	
+	<select id="attachMapperNoticeFindByBno" resultType="org.blacksigma.domain.NoticeAttachVO">
+		select * from tbl_notice_attach
+		where bno = #{bno}
+	</select>
+</mapper>

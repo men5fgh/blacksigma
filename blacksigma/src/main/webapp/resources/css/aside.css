@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/* #aside */
+
+#aside{
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: -200px;
+    border-right: 1px solid rgba(255, 255, 255, 0.9);
+    z-index: 999;
+}
+.aside_in{
+    width: 100%;
+    position: relative;
+}
+.aside_top{
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.aside_top h3{
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.aside_top h3 span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/headphone_blue.png);
+    background-size: 100% auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    margin-right: 10px;
+}
+.aside_main_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.aside_main_top button{
+    width: 25px;
+    height: 25px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    text-indent: -9999px;
+    transition: ease 0.5s;
+}
+.aside_main #repeat_all{
+    background-image: url(../img/repeatall_white.png);
+}
+.aside_main #repeat_all:hover{
+    background-image: url(../img/repeatall_blue.png);
+    transition: ease 0.5s;
+}
+.aside_main #repeat_one{
+    background-image: url(../img/repeatone_white.png);
+}
+.aside_main #repeat_one:hover{
+    background-image: url(../img/repeatone_blue.png);
+    transition: ease 0.5s;
+}
+.aside_main #shuffle{
+    background-image: url(../img/shuffle_white.png);
+}
+.aside_main #shuffle:hover{
+    background-image: url(../img/shuffle_blue.png);
+    transition: ease 0.5s;
+}
+.aside_main h3{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.aside_main h3 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/compactdisk_white.png);
+    background-size: 100% auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    margin-right: 10px;
+}
+.music_image{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-size: 75% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url(../img/logo_black.png);
+    border: 0;
+    border-radius: 5%;
+    text-indent: -9999px;
+    transition: ease 0.5s;
+    margin: 0 auto;
+}
+.aside_controls{
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+.aside_slidebar{
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#seekslider{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 1px;
+    background: rgba(255, 255, 255, 0.9);
+}
+#seekslider .ui-slider-range{
+    background: #0c8fbb;
+}
+.volumeslider{
+    width: 50px;
+    display: none;
+    padding: 13px;
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    left: 89px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#volumeslider .ui-slider-range{
+    background: #0c8fbb;
+}
+.music_time{
+    display: flex;
+    justify-content: space-between;
+}
+.music_time p{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 5px;
+}
+.aside_buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.aside_buttons>button{
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: 100% auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    transition: ease 0.5s
+}
+#aside_prev{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/left_white.png);
+}
+#aside_prev:hover{
+    background-image: url(../img/left_blue.png);
+    transition: ease 0.5s
+}
+#aside_next{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/right_white.png);
+}
+#aside_next:hover{
+    background-image: url(../img/right_blue.png);
+    transition: ease 0.5s
+}
+#aside_play{
+    background-image: url(../img/play_white.png);
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    border: 0;
+    transition: ease 0.5s;
+    background-color: transparent;
+}
+#aside_play:hover{
+    background-image: url(../img/play_blue.png);
+    transition: ease 0.5s;
+}
+#aside_pause{
+    background-image: url(../img/pause_white.png);
+}
+#aside_pause:hover{
+    background-image: url(../img/pause_blue.png);
+    transition: ease 0.5s;
+}
+#aside_volume{
+    background-image: url(../img/volume_white.png);
+}
+#aside_volume:hover{
+    background-image: url(../img/volume_blue.png);
+    transition: ease 0.5s;
+}
+#aside_volumesmall{
+    background-image: url(../img/volumesmall_white.png);
+}
+#aside_volumesmall:hover{
+    background-image: url(../img/volumesmall_blue.png);
+    transition: ease 0.5s;
+}
+#aside_muted{
+    background-image: url(../img/mute_white.png);
+}
+#aside_muted:hover{
+    background-image: url(../img/mute_blue.png);
+    transition: ease 0.5s;
+}
+#aside_muted{
+    background-image: url(../img/mute_white.png);
+}
+.aside_accordion{
+    position: absolute;
+    top: 100px;
+    right: -42px;
+    width: 40px;
+    height: 60px;
+    
+    background-color: rgba(0, 0, 0, 0.9);
+    
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+#aside_accordion{
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    text-indent: -9999px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    background-image: url(../img/music.png);
+    background-color: transparent;
+    }
+#play_list h3{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+#play_list h3 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/playlist_white.png);
+    background-size: 100% auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    transition: ease 0.5s;
+    margin-right: 10px;
+}
+#play_list ul{
+    width: 100%;
+}
+#play_list ul :first-child{
+    border-top: none;
+}
+#play_list ul li{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    transition: ease 0.5s;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 0px solid rgba(255, 255, 255, 0.1);
+}
+
+#now_pause{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    margin: 30px 0;
+    transition: ease 0.5s;
+    font-weight: 700;
+}
+#now_playing{
+    text-align: center;
+    color: #2dcafe;
+    font-size: 20px;
+    margin: 30px 0;
+    transition: ease 0.5s;
+    font-weight: 700;
+}
+
+/* #aside ends */

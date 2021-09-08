@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #222;
+}
+ul, ol{list-style: none;}
+img{
+    vertical-align: top;
+    border: none;
+    /* 이미지 크기를 초기에 100%로 설정하면, 부모요소의 크기를 따라감 */
+    width: 100%;
+    height: auto;
+}
+a{text-decoration: none;}
+fieldset{border: 0;}
+legend{display: none;}
+.hide{
+    display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute; 
+    top: -9999px;
+    left: -9999px;
+    overflow: hidden;
+}
+/* #wrap starts */
+
+#wrap{
+    width: 100%;
+    min-width: 1366px;
+    position: relative;
+}
+
+/* #header starts */
+
+#header{
+    background-color: black;
+    opacity: 0.95;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    position: fixed;
+    display: block;
+}
+#header .headerIn{
+    width: 1366px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+#header .logo{
+    display: flex;
+}
+#header .sublogo a{
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-image: url(../img/sublogo_white.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    transition: ease 0.1s;
+}
+    #header .sublogo_accordion a{
+        width: 80px;
+        height: 80px;
+        display: block;
+        background-image: url(../img/sublogo_green.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -9999px;
+        transition: ease 0.1s;
+    }
+#header .mainlogo a{
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-image: url(../img/logo_white.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    margin-left: 50px;
+    transition: ease 0.1s;
+}
+    #header .mainlogo_accordion a{
+        width: 80px;
+        height: 80px;
+        display: block;
+        background-image: url(../img/logo_black.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -9999px;
+        margin-left: 50px;
+        transition: ease 0.1s;
+    }
+#header .menu{
+    display: flex;
+}
+#header .gnb{
+    position: relative;
+}
+#header .menu .gnb>ul{
+    display: flex;
+    padding-top: 5px;
+    width: 800px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+#header .menu .gnb>ul>li{
+    width: 80px;
+    font-weight: 500;
+    text-align: center;
+}
+#header .menu .gnb>ul>li a{
+    color: white;
+    opacity: 0.95;
+    transition: ease 0.1s;
+}
+
+#header .menu .gnb>ul>li a:hover{
+    text-decoration: underline;
+}
+
+#header .menu .util{
+    display: flex;
+}
+#header .menu .util ul{
+    display: flex;
+}
+#header .menu .util li{
+    margin-left: 20px;
+}
+#header .menu .util input{
+    background-color: white;
+    opacity: 0.9;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    outline: none;
+}
+#header .menu .util .search a{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../img/search_white.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    transition: ease 0.5s;
+    margin-left: 30px;
+}
+    #header .menu .util .search_accordion a{
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url(../img/search_black.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -9999px;
+        transition: ease 0.5s;
+        margin-left: 30px;
+    }
+#header .menu .util .search a:hover, #header .menu .util .search_accordion a:hover{
+    background-image: url(../img/search_blue.png);
+    transition: ease 0.5s;
+}
+#header .menu .util ul li a{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;   
+    text-indent: -9999px;
+    transition: ease 0.5s;
+}
+#header .menu .util .login a{
+    background-image: url(../img/login_white.png);
+}
+    #header .menu .util .login_accordion a{
+        background-image: url(../img/login_black.png);
+    }
+#header .menu .util .alarm a{
+    background-image: url(../img/alarm_white.png);
+}
+    #header .menu .util .alarm_accordion a{
+        background-image: url(../img/alarm_black.png);
+    }
+#header .menu .util .login a:hover, #header .menu .util .login_accordion a:hover{
+    background-image: url(../img/login_blue.png);
+    transition: ease 0.5s;
+}
+#header .menu .util .alarm a:hover, #header .menu .util .alarm_accordion a:hover{
+    background-image: url(../img/alarm_blue.png);
+    transition: ease 0.5s;
+}   
+
+.header_accordion{
+    width: 803px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 65px;
+    display: none;
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid silver;
+    border-top: none;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.header_accordion_in{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+.header_accordion_in ul li{
+    width: 80px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header_accordion_in ul li a{
+    text-decoration: none;
+    color: #222;
+}
+.header_accordion_in ul li a:hover{
+    text-decoration: underline;
+}
+.header_accordion_in span{
+    display: block;
+    width: 1px;
+    background-color: silver;
+    justify-self: center;
+}
+
+/* #header ends */

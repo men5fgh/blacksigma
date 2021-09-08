@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.blacksigma.mapper.NoticeMapper">
+
+	<select id="mapperNoticeList" resultType="org.blacksigma.domain.NoticeVO">
+	<![CDATA[
+		select * from tbl_notice where bno > 0
+	]]>
+	</select>
+	
+	<select id="mapperNoticeListWithPaging" resultType="org.blacksigma.domain.NoticeVO">
+
+	select bno, title, content, writer, regdate, updatedate , cnt, replycnt, file from
+	(select @rownum:=@rownum+1 as rownum, bno, title, content, writer, regdate, updatedate, cnt, replycnt, file
+	from (select @rownum:=0) as rownum
+	, tbl_notice
+		
+		<choose>
+			<when test='type=="T"'>
+	        	where title like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="C"'>
+        		where content like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="W"'>
+        		where writer like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="TCW"'>
+        		where title like concat('%',#{keyword},'%') or content like concat('%',#{keyword},'%') or writer like concat('%',#{keyword},'%')
+        	</when>
+		</choose>
+		order by bno desc
+		)pageboard
+	<![CDATA[		
+		where rownum>(#{pageNum}-1)*#{amount} and rownum<=#{pageNum}*#{amount}
+	]]>
+	</select>
+	
+	<select id="mapperNoticeGetTotalCount" resultType="int">
+		select count(*)
+		from tbl_notice
+		<choose>
+			<when test='type=="T"'>
+	        	where title like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="C"'>
+        		where content like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="W"'>
+        		where writer like concat('%',#{keyword},'%')
+        	</when>
+        	<when test='type=="TCW"'>
+        		where title like concat('%',#{keyword},'%') or content like concat('%',#{keyword},'%') or writer like concat('%',#{keyword},'%')
+        	</when>
+		</choose>
+	</select>
+	
+	<select id="mapperNoticeView" resultType="org.blacksigma.domain.NoticeVO">
+		select * from tbl_notice where bno = #{bno}
+	</select>
+	
+	<update id="mapperNoticeUpdateCnt" parameterType = "int">
+		update tbl_notice
+		set cnt = cnt + 1
+		where bno = #{bno}
+	</update>
+	
+	<insert id="mapperNoticeWrite">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+			select max(bno)+1 bno from tbl_notice
+		</selectKey>
+		
+		insert into tbl_notice(bno,title,content,writer) 
+		values(#{bno},#{title},#{content},#{writer})
+	</insert>
+</mapper>
